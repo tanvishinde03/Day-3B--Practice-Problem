@@ -43,12 +43,44 @@ namespace Day_3B__Practice_Problem
             Console.WriteLine("Instance: " + source);
             Console.ReadLine();
 
-            TwoStates twostates = new TwoStates();
+            TwoStates twostates = new TwoStates(); //Interface
             twostates.Novels();
             Console.ReadLine();
+
+           
+            var publicAccessSpecifiers = new AccessModifiers();    //Public Access Modifier
+            publicAccessSpecifiers.Value = 10;
+            var result = publicAccessSpecifiers.IncrementValue(publicAccessSpecifiers.Value);
+            Console.WriteLine(result);
+            Console.ReadLine();
+
+            
+            var account = new BankAccount();   // Private Access Modifier
+            account.Deposit(500);
+            var balance = account.GetBalance();
+            Console.WriteLine(balance);
+            Console.ReadLine();
+
+          
+            var rectangle = new Rectangle(10, 5);   // Protected Access Modifier
+            var area = rectangle.GetArea();
+            Console.WriteLine(area);
+            Console.ReadLine();
+
+            
+            var logger = new Logger(); // Internal Access Modifier
+            var messageLog = logger.LogMessage("This is a message");
+            Console.WriteLine(messageLog);
+            Console.ReadLine();
+
         }
     }
 }
+
+
+        
+    
+
         
     
 
