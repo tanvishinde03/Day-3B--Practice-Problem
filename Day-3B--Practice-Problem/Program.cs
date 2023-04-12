@@ -42,6 +42,10 @@ namespace Day_3B__Practice_Problem
             Console.WriteLine("Private Constructor (Source):");
             Console.WriteLine("Instance: " + source);
             Console.ReadLine();
+
+            TwoStates twostates = new TwoStates();
+            twostates.Novels();
+            Console.ReadLine();
         }
     }
 }

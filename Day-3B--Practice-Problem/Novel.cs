@@ -6,76 +6,16 @@ using System.Threading.Tasks;
 
 namespace Day_3B__Practice_Problem
 {
-    public class Car
+    public interface Novel
     {
-        public string Name { get; set; }
-        public int ModelNo { get; set; }
-
-        public Car()
-        {
-            Name = "KIA";
-            ModelNo = 440;
-
-        }
-
+        void Novels();
     }
-    public class TV                                     // Parameterized Constructor
+    class TwoStates : Novel
     {
-        public string Name { get; set; }
-        public int TVID { get; set; }
-
-        public TV(string name, int TVID)
+        public void Novels()
         {
-            Name = name;
-            TVID = 2244;
-        }
-    }
-    public class TV2
-    {
-        public string Name { get; set; }
-        public int TVID { get; set; }
-        public TV Tv { get; }
-
-        public TV2(TV2 tv)
-        {
-            Name = tv.Name;
-            TVID = tv.TVID;
-        }
-
-        public TV2(TV tv)
-        {
-            Tv = tv;
-        }
-    }
-    public class Mobile                             // Static Constructor
-    {
-        public static int Count { get; set; }
-
-        static Mobile()
-        {
-            Count = 0;
-        }
-    }
-    public class Source                          // Private Constructor
-    {
-        private static Source instance;
-
-        private Source()
-        {
-
-        }
-
-        public static Source GetInstance()
-        {
-            if (instance == null)
-            {
-                instance = new Source();
-            }
-            return instance;
+            Console.WriteLine("Two States Novel By Chetan Bhagat");
         }
     }
 
 }
-
-    
-
